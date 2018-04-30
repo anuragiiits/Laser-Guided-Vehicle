@@ -20,6 +20,22 @@ var updateDB = (val) => {
 	fs.writeFile('db.json', json, 'utf8', ()=> console.log("Updated JSON file") );
 }
 
+// var spawn = require("child_process").spawn;
+// var pythonProcess = spawn('python',["./cameraCode.py",'test']);
+// pythonProcess.stdout.on('data', function (data){
+// 	console.log("data");
+// 	console.log(data.toString());
+// });
+var exec = require('child_process').exec, child;
+
+child = exec('python cameraCode.py',
+    function (error, stdout, stderr) {
+        console.log('stdout: ' + stdout);
+        console.log('stderr: ' + stderr);
+        if (error !== null) {
+             console.log('exec error: ' + error);
+        }
+    });
 
 
 var database = firebase.database();
