@@ -1,0 +1,14 @@
+{
+  "name": "fcomm",
+  "version": "1.0.0",
+  "description": "server for detecting numberplate and allowing access",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Anubhav Ujjawal",
+  "license": "ISC",
+  "dependencies": {
+    "firebase": "^4.13.1"
+  }
+}
